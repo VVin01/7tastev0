@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo များ - 7 Taste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="combos.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-circle">7</div>
+                        <span class="logo-text">TASTE</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> ပင်မ</a></li>
+                    <li><a href="menu.html" class="nav-link"><i class="fas fa-utensils"></i> မီနူး</a></li>
+                    <li><a href="delivery.html" class="nav-link"><i class="fas fa-truck"></i> Delivery</a></li>
+                    <li><a href="combos.html" class="nav-link active"><i class="fas fa-star"></i> Combo</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> ဆက်သွယ်ရန်</a></li>
+                    <li><a href="order.html" class="nav-link"><i class="fas fa-shopping-cart"></i> အော်ဒါ</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="order-btn" onclick="window.location.href='order.html'">
+                        <i class="fas fa-bolt"></i>
+                        အမြန်အော်ဒါ
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Combo Hero Section -->
+    <section class="combos-hero">
+        <div class="container">
+            <h1 class="combos-title">Combo Deal များ</h1>
+            <p class="combos-subtitle">အရသာအမျိုးမျိုးကို စျေးသက်သာသော Combo များဖြင့် ခံစားလိုက်ပါ</p>
+            <div class="combo-highlight">
+                <i class="fas fa-tag"></i> စုစုပေါင်း ၂၀၀၀ ကျပ်မှ ၃၅၀၀ ကျပ်အထိ သက်သာခြင်း
+            </div>
+        </div>
+    </section>
+
+    <!-- Cheese Combo -->
+    <section class="combo-section">
+        <div class="container combo-container">
+            <div class="combo-card-large">
+                <div class="combo-header">
+                    <h2 class="combo-name">Cheese Combo</h2>
+                    <div class="combo-price">၁၅၀၀၀ ကျပ်</div>
+                    <p class="combo-subtitle">ချိစ်ချစ်သူများအတွက် အကောင်းဆုံးရွေးချယ်မှု</p>
+                </div>
+                
+                <div class="combo-body">
+                    <p class="combo-description">
+                        ချိစ်၏အရသာအမျိုးမျိုးကို တစ်နေရာထဲတွင် ခံစားနိုင်မည့် အထူး Combo
+                    </p>
+                    
+                    <div class="combo-items">
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Cheese Burger" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Cheese Burger</div>
+                            <div class="combo-item-price">တစ်လုံး</div>
+                        </div>
+                        
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1547584372-6f6d75a1e3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Cheese Steak Hotdog" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Cheese Steak Hotdog</div>
+                            <div class="combo-item-price">တစ်လုံး</div>
+                        </div>
+                        
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1481070414801-51fd732d7184?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Cheese Sandwich" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Cheese Sandwich</div>
+                            <div class="combo-item-price">တစ်လုံး</div>
+                        </div>
+                        
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Coke" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Coke</div>
+                            <div class="combo-item-price">အခမဲ့ (၁) ဗူး</div>
+                        </div>
+                    </div>
+                    
+                    <div class="combo-saving">
+                        <div class="saving-amount">သက်သာခြင်း - ၂၀၀၀ ကျပ်</div>
+                        <div class="saving-text">တစ်ခုချင်းစီဝယ်ယူလျှင် ၁၇၀၀၀ ကျပ် ကျသင့်မည်</div>
+                    </div>
+                    
+                    <div class="combo-actions">
+                        <button class="btn btn-primary" onclick="addComboToCart('combo1', 'Cheese Combo', 15000, 'Cheese Burger + Cheese Steak Hotdog + Cheese Sandwich')">
+                            <i class="fas fa-cart-plus"></i>
+                            ဈေးခြင်းထဲထည့်မယ်
+                        </button>
+                        <a href="order.html" class="btn btn-secondary">
+                            <i class="fas fa-bolt"></i>
+                            အမြန်အော်ဒါတင်မယ်
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Budget Combo -->
+            <div class="combo-card-large">
+                <div class="combo-header">
+                    <h2 class="combo-name">Budget Combo</h2>
+                    <div class="combo-price">၁၂၀၀၀ ကျပ်</div>
+                    <p class="combo-subtitle">စျေးနှုန်းချိုသာစွာဖြင့် အရသာအမျိုးမျိုးကို စမ်းသပ်ကြည့်ရန်</p>
+                </div>
+                
+                <div class="combo-body">
+                    <p class="combo-description">
+                        စျေးနှုန်းသက်သာစွာဖြင့် အရသာ ၃ မျိုးကို ခံစားနိုင်မည့် Economy Combo
+                    </p>
+                    
+                    <div class="combo-items">
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Egg Burger" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Egg Burger</div>
+                            <div class="combo-item-price">တစ်လုံး</div>
+                        </div>
+                        
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Sausage Hotdog" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Sausage Hotdog</div>
+                            <div class="combo-item-price">တစ်လုံး</div>
+                        </div>
+                        
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Sushi" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Sushi Set</div>
+                            <div class="combo-item-price">၆ ချပ်</div>
+                        </div>
+                        
+                        <div class="combo-item">
+                            <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Water" class="combo-item-img" loading="lazy">
+                            <div class="combo-item-name">Water</div>
+                            <div class="combo-item-price">အခမဲ့ (၁) ဗူး</div>
+                        </div>
+                    </div>
+                    
+                    <div class="combo-saving">
+                        <div class="saving-amount">သက်သာခြင်း - ၁၅၀၀ ကျပ်</div>
+                        <div class="saving-text">တစ်ခုချင်းစီဝယ်ယူလျှင် ၁၃၅၀၀ ကျပ် ကျသင့်မည်</div>
+                    </div>
+                    
+                    <div class="combo-actions">
+                        <button class="btn btn-primary" onclick="addComboToCart('combo2', 'Budget Combo', 12000, 'Egg Burger + Sausage Hotdog + Sushi')">
+                            <i class="fas fa-cart-plus"></i>
+                            ဈေးခြင်းထဲထည့်မယ်
+                        </button>
+                        <a href="order.html" class="btn btn-secondary">
+                            <i class="fas fa-bolt"></i>
+                            အမြန်အော်ဒါတင်မယ်
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo Benefits -->
+    <section class="combo-benefits">
+        <div class="container">
+            <h2 class="section-title">Combo များ၏ အကျိုးကျေးဇူးများ</h2>
+            <p class="section-subtitle">ဘာကြောင့် Combo များကို ရွေးချယ်သင့်သလဲ</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>စျေးနှုန်းသက်သာခြင်း</h3>
+                    <p>တစ်ခုချင်းစီဝယ်ယူခြင်းထက် ၁၀% မှ ၂၀% အထိ သက်သာစေပါသည်။</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>အခမဲ့အပိုဆုများ</h3>
+                    <p>Combo ဝယ်ယူသူများအား အခမဲ့ဖျော်ရည် သို့မဟုတ် ရေထည့်သွင်းပေးပါသည်။</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>မိသားစုအတွက် သင့်တော်ခြင်း</h3>
+                    <p>တစ်ဦးထက်ပိုသော စားသုံးသူများအတွက် အရသာအမျိုးမျိုးရရှိစေပါသည်။</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>အခမဲ့ Delivery</h3>
+                    <p>၁၅၀၀၀ ကျပ်အထက် Combo များအတွက် Delivery အခကြေးငွေ အခမဲ့ဖြစ်ပါသည်။</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="order.html" class="btn btn-primary" style="padding: 18px 40px; font-size: 1.2rem;">
+                    <i class="fas fa-shopping-cart"></i>
+                    ယခုအော်ဒါတင်မည်
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">7 <span>TASTE</span></div>
+                    <p>ရန်ကုန်မြို့ရဲ့ အရသာ ၇ မျိုး အတွေ့အကြုံကို သင့်အိမ်အရောက် ပို့ဆောင်ပေးနေသော premium food delivery service ဖြစ်ပါသည်။</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/959790760003" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="viber://chat?number=959790760003" class="social-link" target="_blank"><i class="fab fa-viber"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>လင့်ခ်များ</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> ပင်မစာမျက်နှာ</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> မီနူမ်း</a></li>
+                        <li><a href="delivery.html"><i class="fas fa-chevron-right"></i> Delivery နယ်မြေ</a></li>
+                        <li><a href="combos.html"><i class="fas fa-chevron-right"></i> Combo များ</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> ဆက်သွယ်ရန်</a></li>
+                        <li><a href="order.html"><i class="fas fa-chevron-right"></i> အော်ဒါတင်ရန်</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>ဆက်သွယ်ရန်</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:09790760003">၀၉-၇၉၀၇၆၀၀၀၃</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:09980005515">၀၉-၉၈၀၀၀၅၅၁၅</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@7taste.com">info@7taste.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> ရန်ကုန်မြို့၊ မြန်မာနိုင်ငံ</li>
+                        <li><i class="fas fa-clock"></i> နေ့စဉ် ၉:၀၀ - ၂၂:၀၀</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 <strong>7 TASTE Food Delivery</strong>. အားလုံးသောအခွင့်အရေးများ လုံခြုံစွာထားရှိသည်။</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Combo specific function
+        function addComboToCart(id, name, price, description) {
+            addToCart({
+                id: id,
+                name: name,
+                price: price,
+                description: description,
+                isCombo: true
+            });
+        }
+    </script>
+</body>
+</html>
