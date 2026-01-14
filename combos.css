@@ -1,0 +1,221 @@
+/* Combo Page Specific Styles */
+.combos-hero {
+    background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(255, 159, 28, 0.1));
+    padding: 80px 0;
+    text-align: center;
+}
+
+.combos-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.combos-subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.combo-highlight {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.combo-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.combo-card-large {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-heavy);
+    margin-bottom: 50px;
+    transition: var(--transition);
+}
+
+.combo-card-large:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.combo-header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.combo-name {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.combo-price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--gold);
+}
+
+.combo-subtitle {
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.combo-body {
+    padding: 40px;
+}
+
+.combo-description {
+    font-size: 1.1rem;
+    color: var(--dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.combo-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.combo-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background: var(--light);
+    transition: var(--transition);
+}
+
+.combo-item:hover {
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.combo-item-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.combo-item-name {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.combo-item-price {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.combo-saving {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(46, 213, 115, 0.1), rgba(123, 237, 159, 0.1));
+    border-radius: var(--border-radius);
+}
+
+.saving-amount {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.saving-text {
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.combo-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.combo-benefits {
+    background: linear-gradient(135deg, rgba(255, 71, 87, 0.05), rgba(255, 159, 28, 0.05));
+    padding: 60px 0;
+    margin-top: 50px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.benefit-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .combos-title {
+        font-size: 2.2rem;
+    }
+    
+    .combo-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .combo-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .combo-actions .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
