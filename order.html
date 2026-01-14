@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အော်ဒါတင်ရန် - 7 Taste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-circle">7</div>
+                        <span class="logo-text">TASTE</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> ပင်မ</a></li>
+                    <li><a href="menu.html" class="nav-link"><i class="fas fa-utensils"></i> မီနူး</a></li>
+                    <li><a href="delivery.html" class="nav-link"><i class="fas fa-truck"></i> Delivery</a></li>
+                    <li><a href="combos.html" class="nav-link"><i class="fas fa-star"></i> Combo</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fas fa-phone-alt"></i> ဆက်သွယ်ရန်</a></li>
+                    <li><a href="order.html" class="nav-link active"><i class="fas fa-shopping-cart"></i> အော်ဒါ</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="order.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="order-btn" onclick="window.location.href='order.html'">
+                        <i class="fas fa-bolt"></i>
+                        အမြန်အော်ဒါ
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Hero Section -->
+    <section class="order-hero">
+        <div class="container">
+            <h1 class="order-title">အော်ဒါတင်ရန်</h1>
+            <p class="order-subtitle">အောက်ပါအဆင့်များအတိုင်း သင့်အော်ဒါကို အလွယ်တကူတင်နိုင်ပါသည်</p>
+            
+            <div class="order-steps">
+                <div class="order-step">
+                    <div class="step-number">၁</div>
+                    <h3>အစားအစာရွေးချယ်ပါ</h3>
+                    <p>မီနူးမှ သင့်နှစ်သက်ရာအစားအစာများကို ရွေးချယ်ပါ</p>
+                </div>
+                
+                <div class="order-step">
+                    <div class="step-number">၂</div>
+                    <h3>အချက်အလက်ဖြည့်ပါ</h3>
+                    <p>သင့်နာမည်၊ ဖုန်းနံပါတ်နှင့် လိပ်စာကို ဖြည့်သွင်းပါ</p>
+                </div>
+                
+                <div class="order-step">
+                    <div class="step-number">၃</div>
+                    <h3>အော်ဒါတင်ပါ</h3>
+                    <p>အော်ဒါကို တင်ပြီး ဖုန်းဆက်အတည်ပြုချက်ယူပါ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section">
+        <div class="container order-container">
+            <div class="order-grid">
+                <!-- Order Summary -->
+                <div class="order-summary-card">
+                    <h2><i class="fas fa-shopping-cart"></i> သင်၏ အော်ဒါ</h2>
+                    
+                    <div class="order-items-list" id="orderItems">
+                        <!-- Order items will be loaded by JavaScript -->
+                    </div>
+                    
+                    <div class="order-totals" id="orderTotals" style="display: none;">
+                        <div class="total-row">
+                            <span>အစားအစာစုစုပေါင်း</span>
+                            <span id="subtotal">၀ ကျပ်</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Delivery ခများ</span>
+                            <span id="deliveryFee">၀ ကျပ်</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>စုစုပေါင်း</span>
+                            <span id="grandTotal">၀ ကျပ်</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Form -->
+                <div class="order-form-card">
+                    <h2><i class="fas fa-user-circle"></i> အော်ဒါအချက်အလက်</h2>
+                    
+                    <form id="orderForm">
+                        <!-- Customer Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> ကိုယ်ရေးအချက်အလက်</h3>
+                            
+                            <div class="form-group">
+                                <label for="customerName">နာမည်</label>
+                                <input type="text" id="customerName" name="customerName" placeholder="သင့်နာမည်ထည့်ပါ" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="customerPhone">ဖုန်းနံပါတ်</label>
+                                <input type="tel" id="customerPhone" name="customerPhone" placeholder="၀၉-XXXXXXXXX" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="customerEmail">အီးမေးလ် (မပါလည်းရပါသည်)</label>
+                                <input type="email" id="customerEmail" name="customerEmail" placeholder="email@example.com">
+                            </div>
+                        </div>
+                        
+                        <!-- Delivery Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-truck"></i> Delivery အချက်အလက်</h3>
+                            
+                            <div class="form-group">
+                                <label for="deliveryArea">Delivery နယ်မြေ</label>
+                                <select id="deliveryArea" name="deliveryArea" required>
+                                    <option value="">နယ်မြေရွေးပါ</option>
+                                    <option value="လှိုင်">လှိုင်</option>
+                                    <option value="စမ်းချောင်း">စမ်းချောင်း</option>
+                                    <option value="ကမာရွတ်">ကမာရွတ်</option>
+                                    <option value="မရမ်းကုန်း">မရမ်းကုန်း</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="deliveryAddress">လိပ်စာအပြည့်အစုံ</label>
+                                <textarea id="deliveryAddress" name="deliveryAddress" placeholder="အိမ်အမှတ်၊ လမ်း၊ ရပ်ကွက်" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="deliveryTime">ပို့ဆောင်ချိန်</label>
+                                <select id="deliveryTime" name="deliveryTime" required>
+                                    <option value="">အချိန်ရွေးပါ</option>
+                                    <option value="အမြန်ဆုံး">အမြန်ဆုံး</option>
+                                    <option value="၃၀ မိနစ်အတွင်း">၃၀ မိနစ်အတွင်း</option>
+                                    <option value="၁ နာရီအတွင်း">၁ နာရီအတွင်း</option>
+                                    <option value="၂ နာရီအတွင်း">၂ နာရီအတွင်း</option>
+                                    <option value="ည ၆ နာရီကြား">ည ၆ နာရီကြား</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Method -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-credit-card"></i> ငွေပေးချေမှုနည်းလမ်း</h3>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-method selected" data-method="cash">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <span>ငွေသား</span>
+                                </div>
+                                
+                                <div class="payment-method" data-method="kbz">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <span>KBZ Pay</span>
+                                </div>
+                                
+                                <div class="payment-method" data-method="wave">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <span>Wave Money</span>
+                                </div>
+                                
+                                <div class="payment-method" data-method="cb">
+                                    <div class="payment-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <span>CB Pay</span>
+                                </div>
+                            </div>
+                            
+                            <input type="hidden" id="paymentMethod" name="paymentMethod" value="cash" required>
+                        </div>
+                        
+                        <!-- Order Notes -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-sticky-note"></i> အထူးမှာကြားချက်</h3>
+                            
+                            <div class="form-group">
+                                <label for="orderNotes">မှတ်ချက် (မပါလည်းရပါသည်)</label>
+                                <textarea id="orderNotes" name="orderNotes" placeholder="ဥပမာ - ငရုတ်သီးနည်းနည်းထည့်ပေးပါ၊ ဖန်ခွက်နှင့်တကွ ပို့ပေးပါ"></textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Note -->
+                        <div class="form-note">
+                            <i class="fas fa-info-circle"></i>
+                            အော်ဒါတင်ပြီးပါက ဖုန်းနံပါတ် ၀၉-၇၉၀၇၆၀၀၀၃ သို့ ဆက်သွယ်၍ အော်ဒါအတည်ပြုချက်ယူရန် လိုအပ်ပါသည်။
+                        </div>
+                        
+                        <button type="submit" class="submit-order-btn" id="submitOrderBtn" disabled>
+                            <i class="fas fa-paper-plane"></i>
+                            အော်ဒါတင်မည်
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Order Options -->
+    <section class="quick-order-options">
+        <div class="container">
+            <div class="quick-order-box">
+                <h2>မြန်မြန်အော်ဒါတင်လိုပါသလား?</h2>
+                <p>ကျေးဇူးပြု၍ ဖုန်းနံပါတ်များကို တိုက်ရိုက်ဆက်သွယ်၍ အော်ဒါတင်နိုင်ပါသည်</p>
+                
+                <div class="quick-buttons">
+                    <a href="tel:09790760003" class="quick-btn">
+                        <i class="fas fa-phone"></i>
+                        ဖုန်းနံပါတ် (၁) ဆက်မည်
+                    </a>
+                    
+                    <a href="tel:09980005515" class="quick-btn">
+                        <i class="fas fa-phone"></i>
+                        ဖုန်းနံပါတ် (၂) ဆက်မည်
+                    </a>
+                    
+                   <a href="viber://contact?number=959790760003" class="quick-btn">
+    <i class="fab fa-viber"></i>
+    Viber မှတင်မည်
+</a>
+<a href="https://t.me/seven_taste_bot" class="quick-btn">
+    <i class="fab fa-telegram"></i>
+    Telegram မှတင်မည်
+</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">7 <span>TASTE</span></div>
+                    <p>ရန်ကုန်မြို့ရဲ့ အရသာ ၇ မျိုး အတွေ့အကြုံကို သင့်အိမ်အရောက် ပို့ဆောင်ပေးနေသော premium food delivery service ဖြစ်ပါသည်။</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/959790760003" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="viber://chat?number=959790760003" class="social-link" target="_blank"><i class="fab fa-viber"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>လင့်ခ်များ</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> ပင်မစာမျက်နှာ</a></li>
+                        <li><a href="menu.html"><i class="fas fa-chevron-right"></i> မီနူမ်း</a></li>
+                        <li><a href="delivery.html"><i class="fas fa-chevron-right"></i> Delivery နယ်မြေ</a></li>
+                        <li><a href="combos.html"><i class="fas fa-chevron-right"></i> Combo များ</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> ဆက်သွယ်ရန်</a></li>
+                        <li><a href="order.html"><i class="fas fa-chevron-right"></i> အော်ဒါတင်ရန်</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>ဆက်သွယ်ရန်</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:09790760003">၀၉-၇၉၀၇၆၀၀၀၃</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:09980005515">၀၉-၉၈၀၀၀၅၅၁၅</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@7taste.com">info@7taste.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> ရန်ကုန်မြို့၊ မြန်မာနိုင်ငံ</li>
+                        <li><i class="fas fa-clock"></i> နေ့စဉ် ၉:၀၀ - ၂၂:၀၀</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 <strong>7 TASTE Food Delivery</strong>. အားလုံးသောအခွင့်အရေးများ လုံခြုံစွာထားရှိသည်။</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
